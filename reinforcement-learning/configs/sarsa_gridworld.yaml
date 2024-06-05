@@ -1,0 +1,20 @@
+agent:
+  type: sarsa
+  alpha: 0.1
+  gamma: 0.99
+  epsilon: 1.0
+  epsilon_decay: 0.995
+  epsilon_min: 0.01
+
+training:
+  env: gridworld
+  n_episodes: 300
+  max_steps: 200
+  eval_every: 50
+  checkpoint_dir: experiments/results/sarsa_gridworld
+
+logging:
+  tensorboard: false
+  csv: true
+
+seed: 42

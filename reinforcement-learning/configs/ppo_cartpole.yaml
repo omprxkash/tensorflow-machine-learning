@@ -1,0 +1,24 @@
+agent:
+  type: ppo
+  hidden_dims: [64, 64]
+  lr: 3e-4
+  gamma: 0.99
+  gae_lambda: 0.97
+  clip_eps: 0.2
+  value_coef: 0.5
+  entropy_coef: 0.01
+  n_epochs: 4
+  batch_size: 64
+  rollout_steps: 128
+
+training:
+  env: CartPole-v1
+  n_updates: 100
+  eval_every: 20
+  checkpoint_dir: experiments/results/ppo_cartpole
+
+logging:
+  tensorboard: false
+  csv: true
+
+seed: 42
